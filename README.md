@@ -1,5 +1,7 @@
 ==============================================================================
 
+  TexturePacker To SS
+  
   TexturePacker Exporter Plugin for OPTPiX SpriteStudio 5
 
   Copyright(C) Web Technology Corp.
