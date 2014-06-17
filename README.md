@@ -93,6 +93,18 @@ Texture Packerでアトラスを作成した際に使用した細切れの
 - TextuePacker から出力した .ssce ファイルを正しく読み込むためには
   SpriteStudio 5.1.0 以降のバージョンが必要です。
 
+- セルの原点を維持する方法
+
+  TexturePacker 自体には原点の情報が含まれないため、
+  1. TexturePacker で Publish
+  2. SpriteStudio で原点設定
+  3. TexturePacker で再度 Publish
+  
+  すると、原点の設定が失われてしまいます。
+
+  これを回避するには、SpriteStudio を起動したままの状態で、TexturePacker でPublish し、セルマップファイルを上書きするようにします。
+  次に SpriteStudio に切り替えて該当のセルマップファイルを選択し、右メニューから「リロード」を選択します。
+
 - 一度 SpriteStudio に読み込んで、参照セルキーを追加した後に、該当するセルの元
   画像のファイル名を変更し、再度 TexturePacker から Publish すると変更前の名前
   を持つセルが見つからず、アニメーションが参照するセルが無効状態になります。
