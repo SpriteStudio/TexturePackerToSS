@@ -1,117 +1,130 @@
 ==============================================================================
 
-  TexturePacker Exporter Plugin for OPTPiX SpriteStudio
+  TexturePacker Exporter Plugin for OPTPiX SpriteStudio 5
 
-  Copyright(C) 2013 Web Technology Corp.
+  Copyright(C) Web Technology Corp.
 
 ==============================================================================
 
 ------------------------------------------------------------------------------
-# �͂��߂�
+# はじめに
 
-�{�v���O�C���́ATexturePacker �ō쐬�����e�N�X�`���A�g���X��SpriteStudio��ssce
-�`���ɕϊ�����TexturePacker�p�̃G�N�X�|�[�^�ł��B
+本プラグインは、TexturePacker で作成したテクスチャアトラスをOPTPiX SpriteStudio 5 の
+ssce 形式に変換するTexturePacker用のエクスポータです。
 
-Texture Packer�ŃA�g���X���쐬�����ۂɎg�p�����א؂��
-�C���[�W��SpriteStudio�̃Z���Ƃ��Ďg�p�ł��܂��B
+Texture Packerでアトラスを作成した際に使用した細切れの
+イメージをSpriteStudioのセルとして使用できます。
 
-���̃v���O�C����Texture Packer�ɃC���X�g�[�����Ă��g�p���������܂��B
+このプラグインはTexture Packerにインストールしてご使用いただけます。
 
 ------------------------------------------------------------------------------
-# �X�V����
+# 更新履歴
 
 1.0 (2013/9/26)
-- ���񃊃��[�X
+- 初回リリース
 
 ------------------------------------------------------------------------------
-# �C���X�g�[���菇
+# インストール手順
 
-1. Texture Packer���N�����܂��B
+1. ダウンロードした.zipファイルを解凍しておきます。
 
-2. Texture Packer�̃��j���[���́uPreferences�v��I�т܂��B  
-  (Windos�łł�Help���AMac�ł�TexturePacker���j���[���ɓ����Ă��܂��B�j
+1. Texture Packerを起動します。
 
-3. �G�N�X�|�[�^�̃t�H���_��I�����܂��B  
-  [Preferences]�_�C�A���O����[Settings]�^�u���ɂ���A[Custom data exporters]��
-  �G�N�X�|�[�^�̃v���O�C��������t�H���_��I�����܂��B
+1. Texture Packerのメニュー内の「Preferences」を選びます。  
 
-  ���̎��A�v���O�C���̃t�H���_�K�w�͉��L�̗l�ɂ��ĉ������B
+  (Windos版ではHelp内、MacではTexturePackerメニュー内に入っています。）
 
- �@�@TexturePackerPlguins [��E�C��]  
- �@�@�@�@SpriteStudio  
- �@�@�@�@�@�@|-exporter.xml  
- �@�@�@�@�@�@|-template.xml
+1. エクスポータのフォルダを設定します。  
 
-  ��Ƃ��Ď����Ă���uTexturePackerPlguins�v�t�H���_����L��[Custom data exporters]�t�H���_�I���e�L�X�g�{�b�N�X�֓��͂��܂��B
+  [Settings]タブに移動します。
+  
+  [Custom data Exporters] の Exporter Directory テキストボックスを確認します。
 
-4. Texture Packer���ċN�����ĉ������B
+  空の場合は、新規にフォルダを作成します。
 
-�ȏ�� Output - Data Format�ցuSpriteStudio�v�`���̖��O���\������܂��B
+  例えば、任意の場所に"TexturePackerPlugins"(例)という名前のフォルダを作成し、このフォルダを指定します。
+
+1. エクスポータフォルダの中に先ほど解凍してできたSpriteStudioフォルダを移動します。
+
+  例としてWindows版でダウンロード先にエクスポータフォルダを作成した場合、下記のようになります。
+  
+  `C:\Users\ユーザー名\Downloads\TexturePackerPlugins\SpriteStudio`
+  
+  このフォルダ内に下記２ファイルが存在することになります。
+    - exporter.xml  
+    - template.xml
+
+1. Texture Packerを再起動します。
+
+以上で Output - Data Formatへ「SpriteStudio」形式の名前が表示されます。
+
+表示されない場合は、エクスポータフォルダが直接 SpriteStudio フォルダを指していないかご確認ください。
+この場合は、１つ上のフォルダを指すよう変更してTexture Packer を再起動してください。
 
 ------------------------------------------------------------------------------
-# SpriteStudio �֎�荞�ނ��߂̎菇
+# SpriteStudio へ取り込むための手順
 
-1. �܂��p�b�L���O�ΏۂƂȂ�C���[�W��TexturePacker�֓o�^���A�e��ݒ��C�ӂ̒l��
-  �ύX���܂��B
+1. まずパッキング対象となるイメージをTexturePackerへ登録し、各種設定を任意の値に
+  変更します。
 
-2. ��ʂ�̐ݒ肪����������AOutput �y�C���Ɉڂ�܂��B
+2. 一通りの設定が完了したら、Output ペインに移ります。
 
-3. Data Format �� SpriteStudio ��I�����܂��B
+3. Data Format で SpriteStudio を選択します。
 
-4. Data file name �ŏo�͂���Z���}�b�v�t�@�C��(.ssce) �̕ۑ���ƃt�@�C�������w��
-  ���܂��B
+4. Data file name で出力するセルマップファイル(.ssce) の保存先とファイル名を指定
+  します。
 
-5. Texture file �ŏo�͂���摜�t�@�C���̕ۑ���ƃt�@�C�������w�肵�܂��B
+5. Texture file で出力する画像ファイルの保存先とファイル名を指定します。
 
-  �y�����ӁI�z
-  �Z���}�b�v�A�o�͉摜�t�@�C���̕ۑ���t�H���_�́A���p����SpriteStudio�v���W�F
-  �N�g�t�H���_�ȉ����w�肷��悤�ɂ��ĉ������B
+  【ご注意！】
+  セルマップ、出力画像ファイルの保存先フォルダは、利用するSpriteStudioプロジェ
+  クトフォルダ以下を指定するようにして下さい。
 
-6. Publish ���A�G���[���o�������������Ƃ��m�F���܂��B
+6. Publish し、エラーが出ず完了したことを確認します。
 
-7. SpriteStudio ���N�����A�ǉ���̃v���W�F�N�g���J������Ԃɂ��Ă����܂��B
+7. SpriteStudio を起動し、追加先のプロジェクトを開いた状態にしておきます。
 
-8. �o�͂��ꂽ .ssce �t�@�C���� SpriteStudio �փh���b�v���邩�A�u�v���W�F�N�g�v��
-  �j���[�́u�����t�@�C���̒ǉ��v���� .ssce �t�@�C����I�����܂��B
+8. 出力された .ssce ファイルを SpriteStudio へドロップするか、「プロジェクト」メ
+  ニューの「既存ファイルの追加」から .ssce ファイルを選択します。
 
 ------------------------------------------------------------------------------
-# ������
+# ご注意
 
-- TextuePacker ����o�͂��� .ssce �t�@�C���𐳂����ǂݍ��ނ��߂ɂ�
-  SpriteStudio 5.1.0 �ȍ~�̃o�[�W�������K�v�ł��B
+- TextuePacker から出力した .ssce ファイルを正しく読み込むためには
+  SpriteStudio 5.1.0 以降のバージョンが必要です。
 
-- ��x SpriteStudio �ɓǂݍ���ŁA�Q�ƃZ���L�[��ǉ�������ɁA�Y������Z���̌�
-  �摜�̃t�@�C������ύX���A�ēx TexturePacker ���� Publish ����ƕύX�O�̖��O
-  �����Z���������炸�A�A�j���[�V�������Q�Ƃ���Z����������ԂɂȂ�܂��B
+- 一度 SpriteStudio に読み込んで、参照セルキーを追加した後に、該当するセルの元
+  画像のファイル名を変更し、再度 TexturePacker から Publish すると変更前の名前
+  を持つセルが見つからず、アニメーションが参照するセルが無効状態になります。
   
-  �����Ȃ����ꍇ�A�Y���̃Z�����w�肵�����K�v������܂��̂ł����Ӊ������B
-  �p�[�c�̉摜�t�@�C�����͂Ȃ�ׂ����O�Ɋm�肵�Ă������������߂��܂��B
+  こうなった場合、該当のセルを指定し直す必要がありますのでご注意下さい。
+  パーツの画像ファイル名はなるべく事前に確定しておく事をお勧めします。
 
-- Windows �� �� TexturePacker �ŏo�͂���ꍇ�A�S�p�����͎g���܂���B
+- Windows 版 の TexturePacker で出力する場合、全角文字は使えません。
   
-  xml �t�@�C���� shift-jis �t�H�[�}�b�g�ɂȂ邽�߁AMac ��SpriteStudio �ƌ݊���
-  ���ۂĂȂ��������R�ł��B
+  xml ファイルが shift-jis フォーマットになるため、Mac 版SpriteStudio と互換性
+  が保てない事が理由です。
   
-  ���o�͂��ꂽ .ssce �t�@�C���̃w�b�_�ɂ��� encoding="utf-8" ��
-    encoding="shift-jis" �ɏ������������ Windows �� SpriteStudio �ɓǂݍ����
-    �㏑���ۑ������ utf-8 �ɕϊ�����AMac ��SpriteStudio�ł��ǂݍ��߂�悤�ɂ�
-    ��܂��B
+  ※出力された .ssce ファイルのヘッダにある encoding="utf-8" を
+    encoding="shift-jis" に書き換えた上で Windows 版 SpriteStudio に読み込んで
+    上書き保存すると utf-8 に変換され、Mac 版SpriteStudioでも読み込めるようにな
+    ります。
   
-  ��Mac �� TexturePacker �ŕۑ������ꍇ�AUTF-8 �ɂȂ邽�߁ASpriteStudio �ɖ��
-    �Ȃ��ǂݍ��߂܂��B
+  ※Mac 版 TexturePacker で保存した場合、UTF-8 になるため、SpriteStudio に問題
+    なく読み込めます。
 
-- FixedSize, MaxSize ���z���ăG���A�O�ƂȂ�摜�t�@�C���������Ԃ� Publish ��
-  �ꂽ ssce �� SpriteStudio �ɓǂݍ��߂܂���B
+- FixedSize, MaxSize を越えてエリア外となる画像ファイルがある状態で Publish さ
+  れた ssce は SpriteStudio に読み込めません。
 
 
 
 ==============================================================================
-������ЃE�F�u�e�N�m���W  
+株式会社ウェブテクノロジ  
 http://www.webtech.co.jp/  
-Copyright(C) 2013 Web Technology Corp.  
+Copyright(C) Web Technology Corp.  
 ==============================================================================
 
-* OPTPiX SpriteStudio, Web Technology�́A������ЃE�F�u�e�N�m���W�̓o�^���W�ł��B
-* ���̑��̏��i���͊e�Ђ̓o�^���W�܂��͏��W�ł��B
+* OPTPiX SpriteStudio, Web Technologyは、株式会社ウェブテクノロジの登録商標です。
+* その他の商品名は各社の登録商標または商標です。
 
 [End of TEXT]
