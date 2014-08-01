@@ -34,7 +34,7 @@ Texture Packerでアトラスを作成した際に使用した細切れの
 
 1. Texture Packerのメニュー内の「Preferences」を選びます。  
 
-  (Windos版ではHelp内、MacではTexturePackerメニュー内に入っています。）
+  (Windows版ではFile、MacではTexturePackerメニュー内に入っています。）
 
 1. エクスポータのフォルダを設定します。  
 
