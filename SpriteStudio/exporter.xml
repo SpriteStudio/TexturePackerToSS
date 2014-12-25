@@ -1,6 +1,6 @@
 <exporter version="1.0">
   <!-- identifier of the exporter -->
-  <name>SpriteStudio_v1.0</name>
+  <name>SpriteStudio_NoPivot</name>
  
   <!-- display name of the exporter for the combo box -->
   <displayName>SpriteStudio (No Pivot)</displayName>
@@ -9,7 +9,7 @@
   <description>OPTPiX SpriteStudio CellMap File.</description>
  
   <!-- exporter version -->
-  <version>1.0</version>
+  <version>1.0.1</version>
  
   <!-- currently only one file allowed -
        more to come soon -->
