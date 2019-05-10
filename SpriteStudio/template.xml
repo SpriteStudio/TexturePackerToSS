@@ -19,11 +19,22 @@
 	<cells>{% for sprite in allSprites %}
 		<cell>
 			<name>{{sprite.trimmedName}}</name>
-			<pos>{{sprite.frameRect.x}} {{sprite.frameRect.y}}</pos>
-			<pivot>{{sprite|TrimmedPivotX}} {{sprite|TrimmedMirroredPivotY}}</pivot>
+			<pos>{{sprite.frameRect.x}} {{sprite.frameRect.y}}</pos>{% if exporterProperties.writePivots %}
+			<pivot>{{sprite|TrimmedPivotX}} {{sprite|TrimmedMirroredPivotY}}</pivot>{% endif %}
 			<size>{{sprite.frameRect.width}} {{sprite.frameRect.height}}</size>
 			<rotated>0</rotated>
-			<orgImageName>{{sprite.fileData.absoluteFileName}}</orgImageName>
+			<orgImageName>{{sprite.fileData.absoluteFileName}}</orgImageName>{% if false %}
+			<_debug>
+				<trimmed>{{sprite.trimmed}}</trimmed>
+				<size>{{sprite.size.width}} {{sprite.size.height}}</size>
+				<frameRect>{{sprite.frameRect.x}} {{sprite.frameRect.y}} {{sprite.frameRect.width}} {{sprite.frameRect.height}}</frameRect>
+				<sourceRect>{{sprite.sourceRect.x}} {{sprite.sourceRect.y}}  {{sprite.sourceRect.width}} {{sprite.sourceRect.height}}</sourceRect>
+				<cornerOffset>{{sprite.cornerOffset.x}} {{sprite.cornerOffset.y}}</cornerOffset>
+				<untrimmedSize>{{sprite.untrimmedSize.width}} {{sprite.untrimmedSize.height}}</untrimmedSize>
+				<centerOffset>{{sprite.centerOffset.x}} {{sprite.centerOffset.y}}</centerOffset>
+				<pivotPoint>{{sprite.pivotPoint.x}} {{sprite.pivotPoint.y}}</pivotPoint>
+				<pivotPointNorm>{{sprite.pivotPointNorm.x}} {{sprite.pivotPointNorm.y}}</pivotPointNorm>
+			</_debug>{% endif %}
 		</cell>{% if not forloop.last %}{% endif %}{% endfor %}
     </cells>
 </SpriteStudioCellMap>
