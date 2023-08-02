@@ -6,10 +6,10 @@
   <displayName>SpriteStudio (External)</displayName>
  
   <!-- description of the exporter -->
-  <description>OPTPiX SpriteStudio 6 CellMap File.</description>
+  <description>OPTPiX SpriteStudio 7 CellMap File.</description>
  
   <!-- exporter version -->
-  <version>1.2</version>
+  <version>1.3</version>
  
   <!-- currently only one file allowed -
        more to come soon -->
@@ -33,7 +33,7 @@
   <supportsTrimming>yes</supportsTrimming>
  
   <!-- target framework supports rotated sprites -->
-  <supportsRotation>no</supportsRotation>
+  <supportsRotation>yes</supportsRotation>
  
   <!-- rotated sprites direction (cw/ccw) -->
   <rotationDirection>cw</rotationDirection>
