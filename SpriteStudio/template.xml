@@ -5,7 +5,7 @@
 	<generator>TexturePacker</generator>
 	<packed>1</packed>
 	<exportPath></exportPath>
-	<imagePath>{{texture.absoluteFileName}}</imagePath>
+	<imagePath>{{texture.fullName}}</imagePath>
 	<pixelSize>{{texture.size.width}} {{texture.size.height}}</pixelSize>
 	<imagePathAtImport>{{texture.absoluteFileName}}</imagePathAtImport>
 	<packInfoFilePath></packInfoFilePath>
